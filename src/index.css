@@ -1,0 +1,82 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-color: white;
+  --dark-color: rgba(33, 33, 33);
+}
+
+html {
+  background-color: var(--dark-color);
+}
+
+h1 {
+  font-family: teko;
+  font-weight: 300;
+  text-align: center;
+  margin: auto;
+  color: black;
+  letter-spacing: 1.5px;
+  font-size: 36px;
+  padding-top: 4px;
+}
+
+.searchBarDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+.searchBarDiv input {
+  background-color: white;
+  border: 2px solid var(--dark-color);
+  outline: none;
+  border-radius: 20px;
+  padding: 8px;
+  transition: border-color 0.3s ease-out;
+  font-family: inter;
+  color: black;
+}
+
+.searchBarDiv input:focus {
+  border: 2px solid white;
+}
+
+.searchBarDiv button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background-image: url("./assets/magnify.svg");
+  background-position: cover;
+  cursor: pointer;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--light-color);
+}
+
+.answerArea {
+  margin: auto;
+  width: 96%;
+  background-color: rgb(20, 20, 20);
+  border: 1px solid rgb(78, 78, 78);
+  border-radius: 6px;
+  color: white;
+  padding: 8px;
+  font-size: 13px;
+  line-height: 2;
+  letter-spacing: 0.5px;
+}
