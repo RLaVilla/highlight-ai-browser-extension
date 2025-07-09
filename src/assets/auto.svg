@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="50" viewBox="0 0 120 50">
+  <rect x="2" y="2" width="116" height="46" rx="12" ry="12" fill="transparent" stroke="white" stroke-width="3"/>
+  <text x="50%" y="50%" font-family="'Bebas Neue', sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="central">
+    AUTO
+  </text>
+</svg>
