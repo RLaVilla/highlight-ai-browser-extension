@@ -478,11 +478,9 @@ function App() {
       {userMode === "image" && image ? (
         <>
           <h2 className="question">QUESTION</h2>
-          <div
-            className={`imgContainer ${isLoading ? "imgLoading" : ""}`}
-            key={image}
-          >
+          <div className="imgContainer" key={image}>
             <img src={image} alt="Captured" />
+            {isLoading && <div className="shimmerOverlay"></div>}
           </div>
         </>
       ) : userMode === "highlight" &&

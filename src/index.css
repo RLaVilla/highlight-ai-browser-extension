@@ -465,6 +465,7 @@ p.answer {
   font-size: 22px;
   font-weight: 500;
   line-height: 1;
+  font-family: ubuntu;
 }
 
 .answerContainer {
@@ -550,11 +551,11 @@ p.answer {
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    /* transform: translateX(-10px); */
+    transform: translateX(-10px);
   }
   to {
     opacity: 1;
-    /* transform: translateX(0); */
+    transform: translateX(0);
   }
 }
 
@@ -597,6 +598,7 @@ p.answer {
     0px 0px 8px rgba(0, 0, 0, 0.2),
     inset 0px 1px 2px rgba(0, 0, 0, 0.1);
   animation: fadeInLeft 0.3s ease-out;
+  position: relative;
 }
 
 .imgContainer img {
@@ -611,7 +613,19 @@ p.answer {
   animation: pulse-glow 1.5s ease-in-out infinite alternate;
 }
 
-.imgContainer.imgLoading::before {
+.shimmerOverlay {
+  position: absolute;
+  top: 5px; /* Account for padding */
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 2px; /* Match image border-radius */
+  overflow: hidden;
+  animation: pulse-glow 1.5s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.shimmerOverlay::before {
   content: "";
   position: absolute;
   top: 0;

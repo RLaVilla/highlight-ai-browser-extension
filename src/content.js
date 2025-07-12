@@ -247,17 +247,28 @@ function startDrag(e) {
   e.preventDefault();
 
   dragTimeout = setTimeout(() => {
+    console.log("Starting drag..."); // Debug
     isDragging = true;
     startX = e.clientX;
     startY = e.clientY;
 
     selectionBox = document.createElement("div");
-    selectionBox.style.position = "fixed";
-    selectionBox.style.border = "2px dashed rgb(147, 51, 234)";
-    selectionBox.style.background = "rgba(147, 51, 234, 0.1)";
-    selectionBox.style.zIndex = "999999";
-    selectionBox.style.pointerEvents = "none";
+    selectionBox.style.cssText = `
+      position: fixed !important;
+      border: 2px dashed rgb(147, 51, 234) !important;
+      background: rgba(147, 51, 234, 0.1) !important;
+      z-index: 999999 !important;
+      pointer-events: none !important;
+      left: ${startX}px !important;
+      top: ${startY}px !important;
+      width: 1px !important;
+      height: 1px !important;
+      display: block !important;
+      opacity: 1 !important;
+    `;
+
     document.body.appendChild(selectionBox);
+    console.log("Selection box added:", selectionBox); // Debug
   }, 50);
 }
 
